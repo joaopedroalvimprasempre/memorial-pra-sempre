@@ -78,6 +78,44 @@
       .actions .btn{font-size:10.5px}
       .trust{font-size:10px}
     }
+
+    /* Mobile v3: composicao mais fiel ao desktop, sem alterar telas maiores */
+    @media (max-width: 520px){
+      header .wrap{width:100%}
+      nav{height:auto;min-height:68px;padding:10px 14px 9px;display:grid;grid-template-columns:1fr;gap:8px}
+      .brand{justify-self:start}
+      .brand-title{font-size:23px}
+      .brand-subtitle{font-size:7.8px;letter-spacing:.82px}
+      .brand-mark{width:36px;height:32px;flex-basis:36px;left:-3px}
+      .navlinks{display:flex;width:100%;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:1px}
+      .navlinks::-webkit-scrollbar{display:none}
+      .navlinks a,.navlinks a:not(.btn){display:inline-flex!important;flex:1 0 auto;padding:8px 12px;font-size:10px;white-space:nowrap}
+      .hero{padding:34px 0 48px}
+      .hero-grid{grid-template-columns:1fr;gap:30px}
+      .eyebrow{font-size:10.5px;letter-spacing:.72px}
+      h1{font-size:clamp(40px,12.2vw,50px);line-height:1.02;letter-spacing:-1.4px;margin:15px 0 18px}
+      .hero p{font-size:16px;line-height:1.58}
+      .actions{display:flex;flex-wrap:nowrap;gap:9px;margin-top:23px}
+      .actions .btn{width:auto;flex:1 1 0;min-height:50px;padding:11px 10px;font-size:10.5px;line-height:1.18}
+      .trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:22px;font-size:9.5px;line-height:1.28}
+      .trust > *:last-child{grid-column:auto}
+      .trust span{display:flex;align-items:flex-start;gap:3px}
+      .visual{min-height:390px;margin-top:0}
+      .arch{inset:0 8px 18px}
+      .memorial-card{width:min(72%,290px);top:28px}
+      .qr-float{right:8px;bottom:3px;transform:scale(.88);transform-origin:bottom right}
+      .whatsapp-float{width:54px;height:54px;right:15px;bottom:15px}
+    }
+    @media (max-width: 360px){
+      nav{padding-left:11px;padding-right:11px}
+      .brand-title{font-size:21px}
+      .brand-subtitle{font-size:7.2px}
+      .navlinks a,.navlinks a:not(.btn){padding:7px 9px;font-size:9.4px}
+      h1{font-size:38px}
+      .hero p{font-size:15px}
+      .actions .btn{font-size:9.8px;padding-left:7px;padding-right:7px}
+      .trust{font-size:8.8px;gap:5px}
+    }
 </style>
 </head>
 <body>
