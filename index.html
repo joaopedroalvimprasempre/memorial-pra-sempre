@@ -20,7 +20,65 @@
     .modal{display:none;position:fixed;inset:0;background:rgba(10,21,18,.7);z-index:50;padding:20px;align-items:center;justify-content:center}.modal.open{display:flex}.modal-box{width:min(560px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:25px;padding:28px;position:relative}.close{position:absolute;right:17px;top:15px;width:38px;height:38px;border:0;border-radius:50%;cursor:pointer;font-size:20px}.demo-cover{height:260px;border-radius:18px;background:#d8d6cc;overflow:hidden}.demo-cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%}.modal h2{text-align:center;color:var(--green);font-family:Georgia,serif}.timeline{border-left:2px solid var(--sage);padding-left:20px}.timeline div{margin:18px 0}.timeline b{color:var(--green)}
     @media(max-width:850px){.navlinks a:not(.btn){display:none}.hero-grid,.b2b,.business-content,.commercial,.cta-box{grid-template-columns:1fr}.visual{min-height:500px}.steps{grid-template-columns:1fr}.arrow{display:none}.demo-grid{grid-template-columns:1fr 1fr}.hero{padding-top:45px}.cta-box{padding:30px}}
     @media(max-width:520px){.wrap{width:min(100% - 24px,1160px)}.demo-grid{grid-template-columns:1fr}.visual{min-height:440px}.arch{inset:0 0 20px}.memorial-card{top:35px}.qr-float{right:5px}.cta h2{font-size:34px}.navlinks{gap:8px}}
-  </style>
+  
+    /* Ajustes exclusivos para celular. O layout desktop permanece inalterado. */
+    @media (max-width: 520px){
+      header{position:sticky}
+      nav{height:68px}
+      .brand{gap:6px;min-width:0}
+      .brand-title{font-size:23px;white-space:nowrap}
+      .brand-subtitle{font-size:8px;letter-spacing:.9px;margin-top:4px;white-space:nowrap}
+      .brand-mark{width:38px;height:34px;flex-basis:38px;left:-5px;top:1px}
+      .navlinks{display:none}
+      .hero{padding:38px 0 52px}
+      .hero-grid{gap:34px}
+      .eyebrow{font-size:11px;letter-spacing:.8px;gap:7px;white-space:nowrap}
+      .dot{width:7px;height:7px;flex:0 0 7px}
+      h1{font-size:clamp(42px,13.2vw,58px);line-height:1.02;letter-spacing:-1.5px;margin:16px 0 19px}
+      .hero p{font-size:17px;line-height:1.65;max-width:none}
+      .actions{display:grid;grid-template-columns:1fr;gap:12px;margin-top:25px}
+      .actions .btn{width:100%;min-height:54px;padding:14px 16px;text-align:center}
+      .trust{display:grid;grid-template-columns:1fr;gap:10px;margin-top:24px;font-size:13px}
+      .visual{min-height:420px}
+      .whatsapp-float{width:58px;height:58px;right:16px;bottom:16px}
+    }
+    @media (max-width: 380px){
+      .brand-title{font-size:21px}
+      .brand-subtitle{font-size:7.4px;letter-spacing:.75px}
+      .brand-mark{width:34px;height:31px;flex-basis:34px}
+      .eyebrow{font-size:10px;letter-spacing:.55px}
+      h1{font-size:42px}
+    }
+
+    /* Refinamento mobile v2: exclusivo para telas pequenas */
+    @media (max-width: 520px){
+      .wrap{width:min(100% - 28px,1160px)}
+      nav{height:66px}
+      .brand-title{font-size:22px}
+      .brand-subtitle{font-size:7.5px;letter-spacing:.8px}
+      .brand-mark{width:34px;height:31px;flex-basis:34px;left:-3px}
+      .hero{padding:30px 0 44px}
+      .hero-grid{gap:22px}
+      .eyebrow{font-size:10px;letter-spacing:.65px}
+      h1{font-size:clamp(37px,11.5vw,48px);line-height:1.04;letter-spacing:-1.1px;margin:14px 0 17px}
+      .hero p{font-size:15.5px;line-height:1.52}
+      .actions{grid-template-columns:1fr 1fr;gap:9px;margin-top:21px}
+      .actions .btn{min-height:48px;padding:11px 10px;font-size:11px;line-height:1.2}
+      .trust{grid-template-columns:1fr 1fr;column-gap:10px;row-gap:9px;margin-top:21px;font-size:10.5px;line-height:1.35}
+      .trust > *:last-child{grid-column:1 / -1}
+      .visual{min-height:380px}
+      .whatsapp-float{width:52px;height:52px;right:14px;bottom:14px}
+    }
+    @media (max-width: 360px){
+      .wrap{width:min(100% - 22px,1160px)}
+      .brand-title{font-size:20px}
+      .brand-subtitle{font-size:7px;letter-spacing:.65px}
+      h1{font-size:36px}
+      .hero p{font-size:15px}
+      .actions .btn{font-size:10.5px}
+      .trust{font-size:10px}
+    }
+</style>
 </head>
 <body>
 <header><div class="wrap"><nav><a class="brand" href="#"><span class="brand-copy"><span class="brand-title">Pra Sempre</span><span class="brand-subtitle">Memórias que permanecem</span></span><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 72 64" xmlns="http://www.w3.org/2000/svg"><path d="M36 55C30 49 16 39 13 27C10 16 16 9 25 10C31 11 34 15 36 20C38 15 42 11 48 10C57 9 63 16 60 27C57 39 43 49 36 55Z" fill="none" stroke="#b7a27a" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><div class="navlinks"><a class="active" href="#como">Como Funciona</a><a href="#demo">Informações</a><a href="#funerarias">Parcerias</a></div></nav></div></header>
