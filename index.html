@@ -164,6 +164,82 @@
       .portrait{height:103px}
     }
 
+  
+    /* Ajustes exclusivos para celular: mantém os cards solicitados lado a lado. */
+    @media (max-width: 520px){
+      .steps{
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:8px;
+        align-items:stretch;
+      }
+      .steps .step{
+        min-width:0;
+        padding:14px 10px;
+        border-radius:16px;
+      }
+      .steps .step .num{
+        width:34px;
+        height:34px;
+        font-size:12px;
+        margin-bottom:10px;
+      }
+      .steps .step h3{
+        font-size:13px;
+        line-height:1.22;
+        margin:0 0 7px;
+        overflow-wrap:anywhere;
+      }
+      .steps .step p{
+        font-size:10px;
+        line-height:1.42;
+        margin:0;
+        overflow-wrap:anywhere;
+      }
+      .steps .arrow{display:none}
+
+      .demo-grid{
+        display:grid;
+        grid-template-columns:repeat(4,minmax(0,1fr));
+        gap:5px;
+        align-items:stretch;
+      }
+      .demo-grid .feature{
+        min-width:0;
+        padding:10px 5px;
+        border-radius:12px;
+      }
+      .demo-grid .feature .icon{
+        width:26px;
+        height:26px;
+        margin-bottom:8px;
+        font-size:15px;
+      }
+      .demo-grid .feature h3{
+        font-size:8px;
+        line-height:1.18;
+        margin:0 0 6px;
+        overflow-wrap:anywhere;
+      }
+      .demo-grid .feature p{
+        font-size:6.8px;
+        line-height:1.3;
+        margin:0;
+        overflow-wrap:anywhere;
+      }
+    }
+
+    @media (max-width: 360px){
+      .steps{gap:6px}
+      .steps .step{padding:12px 8px}
+      .steps .step h3{font-size:12px}
+      .steps .step p{font-size:9.3px}
+      .demo-grid{gap:4px}
+      .demo-grid .feature{padding:9px 4px}
+      .demo-grid .feature h3{font-size:7.3px}
+      .demo-grid .feature p{font-size:6.2px}
+    }
+
   </style>
 </head>
 <body>
