@@ -116,7 +116,55 @@
       .actions .btn{font-size:9.8px;padding-left:7px;padding-right:7px}
       .trust{font-size:8.8px;gap:5px}
     }
-</style>
+
+    /* Mobile: mantém a composição do hero em duas colunas, como no desktop. */
+    @media (max-width: 520px){
+      .hero{padding:28px 0 38px;overflow:hidden}
+      .hero .wrap{width:calc(100% - 20px)}
+      .hero-grid{
+        display:grid;
+        grid-template-columns:minmax(0,1.18fr) minmax(118px,.82fr);
+        align-items:center;
+        gap:10px;
+      }
+      .hero-grid > div:first-child{min-width:0}
+      .eyebrow{font-size:7.5px;letter-spacing:.45px;line-height:1.25;gap:5px}
+      .eyebrow .dot{width:6px;height:6px;flex:0 0 6px}
+      h1{font-size:clamp(25px,8.5vw,34px);line-height:1.03;letter-spacing:-.75px;margin:10px 0 11px}
+      .hero p{font-size:10.5px;line-height:1.48;margin:0}
+      .actions{display:grid;grid-template-columns:1fr;gap:7px;margin-top:13px}
+      .actions .btn{width:100%;min-width:0;min-height:34px;padding:7px 6px;font-size:7.4px;line-height:1.15;white-space:normal;text-align:center}
+      .trust{display:grid;grid-template-columns:1fr;gap:3px;margin-top:11px;font-size:6.6px;line-height:1.2}
+      .trust > *:last-child{grid-column:auto}
+      .trust span{gap:2px;min-width:0}
+      .visual{width:100%;min-width:0;min-height:300px;margin:0}
+      .arch{inset:10px 0 8px;border-radius:100px 100px 18px 18px}
+      .memorial-card{
+        width:calc(100% - 10px);
+        max-width:none;
+        top:48px;
+        left:50%;
+        transform:translateX(-50%);
+        padding:8px;
+        border-radius:15px;
+      }
+      .portrait{height:112px;border-radius:11px}
+      .memorial-card h3{font-size:13px;line-height:1.08;margin:8px 0 4px}
+      .dates{font-size:8px}
+      .quote{font-size:8px;line-height:1.35;margin-top:7px}
+      .qr-float{display:none}
+    }
+
+    @media (max-width: 360px){
+      .hero-grid{grid-template-columns:minmax(0,1.16fr) minmax(112px,.84fr);gap:8px}
+      h1{font-size:clamp(24px,8.2vw,30px)}
+      .hero p{font-size:9.8px}
+      .visual{min-height:282px}
+      .memorial-card{top:45px}
+      .portrait{height:103px}
+    }
+
+  </style>
 </head>
 <body>
 <header><div class="wrap"><nav><a class="brand" href="#"><span class="brand-copy"><span class="brand-title">Pra Sempre</span><span class="brand-subtitle">Memórias que permanecem</span></span><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 72 64" xmlns="http://www.w3.org/2000/svg"><path d="M36 55C30 49 16 39 13 27C10 16 16 9 25 10C31 11 34 15 36 20C38 15 42 11 48 10C57 9 63 16 60 27C57 39 43 49 36 55Z" fill="none" stroke="#b7a27a" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><div class="navlinks"><a class="active" href="#como">Como Funciona</a><a href="#demo">Informações</a><a href="#funerarias">Parcerias</a></div></nav></div></header>
